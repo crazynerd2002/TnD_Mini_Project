@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Line Performance Analysis</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Ysabeau:wght@1;200&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+  <input type="button" onclick="location.href='index.html';" value="Return to the Home Page">
+  <div id="form">
+    <h1 id="main">Line Parameters </h1><br><br>
+    <form>
+      <!-- placeholder -->
+      <label class="abcd">Please Enter the Parameters below </label><br><br>
+
+      <label>Number of Strands:</label>
+      <input type="number" name="number_of_strands" required, id="numberOfStrands">
+
+      <label>Diameter of Each Strand (m):</label>
+      <input type="number" name="diameter_of_each_strand" step="0.0001" required, id="diameterOfEachStrand">
+
+      <label for="numConductors">Number of Sub-Conductors:</label>
+      <input type="number" id="numConductors" name="numConductors" min="1">
+
+
+      <label>Type of System:</label><br><br>
+      <label class="radio"><input type="radio" name="type_of_system" value="symmetrical">Symmetrical</label>
+      <label class="radio"><input type="radio" name="type_of_system" value="asymmetrical">Unsymmetrical</label><br><br>
+
+      <label>Spacing between Phase Conductors (m):</label><br>
+      <div id="distanceInputs"></div>
+
+      <br><label>Length of Line (km):</label>
+      <input type="number" name="length_of_line" step="0.1" required, id="lengthOfLine" max="250">
+
+      <label>Model of Line:</label><br>
+      <br><label class="radio"><input type="radio" name="model_of_line" value="short_line" , id="shortline">Short
+        line</label>
+      <label class="radio"><input type="radio" name="model_of_line" value="nominal_pi_model" ,
+          id="nominalpimodel">Nominal pi
+        model</label><br><br>
+
+      <label>Resistance of Line (ohms/km):</label>
+      <input type="number" name="resistance_of_line" step="0.0001" required, id="resistanceOfLine">
+
+      <label>Power Frequency (Hz):</label>
+      <input type="number" name="power_frequency" step="0.1" required, id="powerFrequency">
+
+      <label>Nominal System Voltage (kV):</label>
+      <input type="number" name="nominal_system_voltage" step="0.01" required, id="nominalSystemVoltage">
+
+      <label>Receiving End Load (MW):</label>
+      <input type="number" name="receiving_end_voltage" step="0.01" required, id="receivingEndLoad">
+
+      <label>Power Factor:</label>
+      <input type="number" name="power_factor" step="0.01" required, id="powerFactor">
+
+      <button onclick="calculateValues(event)">Calculate</button>
+
+    </form>
+    <script src="./javascript1.js"></script>
+    <br><br><br><br>
+  </div>
+  <div class="results">
+    <br><br>
+    <h1 id="second">Calculation Results</h1><br><br>
+    <div id="abcde"><br><br>
+      <p>Inductance per Phase (H/km): <br><span id="inductance"></span></p>
+      <p>Capacitance per Phase (F/km): <br><span id="capacitance"> </span></p>
+      <p>Inductive Reactance per Phase (ohm): <br><span id="inductiveReactance"></span> </p>
+      <p>Capacitive Reactance per Phase (ohm): <br><span id="capacitiveReactance"></span></p>
+      <p>Charging Current drawn from the sending end substation (A): <br><span id="chargingcurrent"></span></p>
+      <p>ABCD Parameters: <br>A = <span id="A11"></span> +j <span id="A22"></span></p>
+      <p>B =<span id="B11"></span> +j <span id="B22"></span></p>
+      <p>C = <span id="C11"></span> +j <span id="C22"></span></p>
+      <p>D = <span id="D11"></span> +j <span id="D22"></span></p>
+      <p>Sending End Voltage (kV): <br><span id="sendingEndVoltage"></span>  &angle;  <span
+          id="sendingEndVoltageangle"> </span></p>
+      <p>Sending End Current:<br> <span id="sendingEndCurrent"></span>  &angle;  <span id="sendingEndCurrentangle"></span>
+      </p>
+      <p>Voltage Regulationv (%):<br> <span id="voltageRegulation"> </span></p>
+      <p>Power Loss:<br> <span id="ploss"></span></p>
+      <p>Transmission Effiency (%):<br> <span id="eff"></span></p><br>
+      <button onclick="downloadResults()">Download Results</button>
+
+    </div>
+  </div>
+  <div id="popup-message">Values successfully calculated!</div>
+</body>
+</html> 

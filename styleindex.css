@@ -1,0 +1,211 @@
+.member {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #2C3333;
+}
+
+body {
+    /* background-color: #7DB9B6; */
+    background: url("587175a3cde8a45420b81f61a2f25254.jpg") center/cover no-repeat;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.main-team {
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.name {
+    font-size: 30px;
+}
+
+#d {
+    width: 50%;
+    margin: auto;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member,.team-member1 {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background-color: #2C3333;
+    text-align: center;
+}
+.team-member {
+    align-items: center;
+    display: inline-block;
+    width: 20%;
+    margin: 0 2%;
+  }
+  
+  
+
+.team-member p,.team-member1{
+    margin: 0;
+}
+
+.rollno {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input[type="button"] {
+    margin: 20px auto;
+    display: block;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1E90FF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="button"]:hover {
+    background-color: #0047AB;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+@keyframes box1 {
+    from {
+        opacity: 0;
+        /* transform: translateY(50px); */
+    }
+
+    to {
+        opacity: 1;
+        /* transform: translateY(0); */
+    }
+}
+
+#a,
+#b,
+#c,
+input[type="button"] {
+    opacity: 0;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+h1,
+h2,
+.main-team,
+#d {
+    opacity: 0;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+h1,
+h2,
+.main-team,
+#d {
+    animation: box1 0.4s forwards;
+}
+
+
+#a {
+    animation: box1 0.5s forwards;
+    animation-delay: 0.4s;
+}
+
+#b {
+    animation: box1 0.5s forwards;
+    animation-delay: 0.8s;
+}
+
+#c {
+    animation: box1 0.5s forwards;
+    animation-delay: 1.2s;
+}
+
+input[type="button"] {
+    animation: box1 0.5s forwards;
+    animation-delay: 1.6s;
+}
+
+
+#a {
+    transition: transform 0.2s ease-in-out;
+}
+
+#a:hover {
+    transform: scale(1.1);
+}
+
+#b {
+    transition: transform 0.2s ease-in-out;
+}
+
+#b:hover {
+    transform: scale(1.1);
+}
+
+#c {
+    transition: transform 0.2s ease-in-out;
+}
+
+#c:hover {
+    transform: scale(1.1);
+}
+
+#d {
+    transition: transform 0.2s ease-in-out;
+}
+
+#d:hover {
+    transform: scale(1.1);
+}
+
+a {
+    color: #FEFBE9;
+    text-decoration: none;
+}

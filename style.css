@@ -1,0 +1,228 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    background: url("GettyImages-1173337289-1080x720.jpg.jpg") center/cover no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+}
+#form, .results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#main {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 40px;
+}
+
+#second {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 40px;
+}
+
+form {
+    max-width: 900px;
+    margin: auto;
+    background-color: #2C3333;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-decoration: none;
+    animation: slide-up 0.7s ease-out;
+
+}
+
+label {
+    /* display: block; */
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+input[type="number"] {
+    width: 96%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+
+}
+
+
+button {
+    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1E90FF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.2s ease-in-out
+}
+
+button:hover {
+    background-color: #0047AB;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label.radio {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#form {
+    /* float: left; */
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+}
+
+#results {
+    /* float: left; */
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+
+}
+
+label.abcd {
+    font-size: 25px;
+    text-align: center;
+}
+
+#abcde {
+
+    /* float: left; */
+    width: 90%;
+    margin: auto;
+    margin-bottom: 7%;
+    max-width: 900px;
+    background-color: #2C3333;
+    padding-left: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    animation: slide-up 0.7s ease-out;
+
+
+}
+
+span {
+    color: #191825;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 0px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    background-color: #fff;
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 15px;
+}
+#A11,#A22,#B11,#B22,#C11,#C22,#D11,#D22,#sendingEndVoltage,#sendingEndVoltageangle,#sendingEndCurrent,#sendingEndCurrentangle{
+    width: 42%;
+}
+
+input[type="button"] {
+    margin: 20px auto;
+    display: block;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1E90FF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="button"]:hover {
+    background-color: #0047AB;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input[type="button"] {
+    opacity: 0;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+input[type="button"] {
+    animation: slide-up 0.7s forwards;
+}
+
+#popup-message {
+    display: none;
+    font-size: 25px;
+    color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1E90FF;
+    padding: 10px 20px;
+    /* border: 2px solid #000; */
+    border-radius: 5px;
+    z-index: 9999;
+}
