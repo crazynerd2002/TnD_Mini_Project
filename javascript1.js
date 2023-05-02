@@ -225,9 +225,9 @@ console.log(sgmd1)
     var Is2 = C2*Vr + A1*Ir2 - A2*Ir1;
     var Is = Math.sqrt(Is1*Is1 + Is2*Is2);
     var Is_angle = 180*Math.atan(-Is2/Is1)/pi;
-    // var P1 = Ir1 + ((Y*XL*R)/(z)) , P2 = Ir2 - ((Y*R*R*Vr)/z);
-    var Pin = 3*Vs*Is*Math.cos(Vs_angle - Ir_angle);
-    var Ploss = Pin - receivingEndLoad*1000000;
+    var P1 = Ir1 + ((Y*XL*R)/(z)) , P2 = Ir2 - ((Y*R*R*Vr)/z);
+//     var Pin = 3*Vs*Is*Math.cos(Vs_angle - Ir_angle);
+    var Pin = Ploss*3 - receivingEndLoad*1000000;
   }
   console.log(Pin)
   console.log(A1);
@@ -293,8 +293,8 @@ function downloadResults() {
   Inductive Reactance: ${inductiveReactance}
   Capacitive Reactance: ${capacitiveReactance}
   Charging Current drawn from the sending end substation: ${chargingcurrent} 
-  Sending End Voltage: ${sendingEndVoltage} ${sendingEndVoltageangle} 
-  Sending End Current: ${sendingEndCurrent} ${sendingEndCurrentangle} 
+  Sending End Voltage: ${sendingEndVoltage} Angle: ${sendingEndVoltageangle} 
+  Sending End Current: ${sendingEndCurrent} Angle: ${sendingEndCurrentangle} 
   Voltage Regulation: ${voltageRegulation}
   Power Loss: ${powerloss}
   Transmission Effiency: ${efficiency}`;
