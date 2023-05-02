@@ -122,73 +122,72 @@ function calculateValues(event) {
 
   //Calculate values
   var pi = 3.141592654;
-  // var esi = 8.85*Math.pow(10, -12);
-  // console.log(esi)
+  var esi = 8.85*Math.pow(10, -12);
+  console.log(esi)
   var Vrvalue =receivingEndVoltage/ Math.pow(3,1/2) ;
   const Vr = roundToDecimal(Vrvalue,5)
-  // var layers = (3 + Math.sqrt(9 + 12 * (numberOfStrands - 1))) / 6;
-  // var OverallD = (2 * layers - 1) * d;
-  // console.log(layers)
-  // var r = OverallD/2;
-  // console.log(r) 
-  // const r = 0.7788;
+  var layers = (3 + Math.sqrt(9 + 12 * (numberOfStrands - 1))) / 6;
+  var OverallD = (2 * layers - 1) * d;
+  console.log(layers)
+  var r = OverallD/2;
+  console.log(r) 
 
 
-  // Number of Conductors
-// if(document.getElementById("numConductors").value ==1){
-//   var Q = r*0.7788;
-//   var sgmd = Math.pow(Q,1);
-//   var sgmd1 = Math.pow(Q/0.7788,1);
-// }
-// else if(document.getElementById("numConductors").value ==2){
-//   var Q = r*0.7788*d;
-//   var sgmd = Math.pow(Q*Q,1/4);
-//   var sgmd1 = Math.pow(Q*Q/(0.7788*0.7788),1/4);
-// }
-// else if(document.getElementById("numConductors").value ==3){
-//   var Q = r*0.7788*d*d;
-//   var sgmd = Math.pow(Q*Q*Q,1/9);
-//   var sgmd1 = Math.pow(Q*Q*Q/(Math.pow(0.7788,3)),1/9);
-// }
-// else if(document.getElementById("numConductors").value ==4){
-//   var Q = r*0.7788*d*d*d*Math.pow(2,1/2);
-//   var sgmd = Math.pow(Q*Q*Q*Q,1/16);
-//   var sgmd1 = Math.pow(Q*Q*Q*Q/(Math.pow(0.7788,4)),1/16);
-// }
-// else if(document.getElementById("numConductors").value ==5){
-//   var Q = r*0.7788*d*d*(2*d*0.5878*2*d*0.5878);
-//   var sgmd = Math.pow(Q*Q*Q*Q*Q,1/25);
-//   var sgmd1 = Math.pow(Q*Q*Q*Q*Q/(Math.pow(0.7788,5)),1/25);
-// }
-// else if(document.getElementById("numConductors").value ==6){
-//   var x = Math.sqrt((d*Math.pow(3,1/2)/2)*(d*Math.pow(3,1/2)/2) + d*d)
-//   var Q = r*0.7788*d*d*x*x*((d*Math.pow(3,1/2) + d));
-//   var sgmd = Math.pow(Q*Q*Q*Q*Q*Q,1/36);
-//   var sgmd1 = Math.pow(Q*Q*Q*Q*Q*Q/(Math.pow(0.7788,6)),1/36);
-// }
-// console.log(sgmd1)
+  Number of Conductors
+if(document.getElementById("numConductors").value ==1){
+  var Q = r*0.7788;
+  var sgmd = Math.pow(Q,1);
+  var sgmd1 = Math.pow(Q/0.7788,1);
+}
+else if(document.getElementById("numConductors").value ==2){
+  var Q = r*0.7788*d;
+  var sgmd = Math.pow(Q*Q,1/4);
+  var sgmd1 = Math.pow(Q*Q/(0.7788*0.7788),1/4);
+}
+else if(document.getElementById("numConductors").value ==3){
+  var Q = r*0.7788*d*d;
+  var sgmd = Math.pow(Q*Q*Q,1/9);
+  var sgmd1 = Math.pow(Q*Q*Q/(Math.pow(0.7788,3)),1/9);
+}
+else if(document.getElementById("numConductors").value ==4){
+  var Q = r*0.7788*d*d*d*Math.pow(2,1/2);
+  var sgmd = Math.pow(Q*Q*Q*Q,1/16);
+  var sgmd1 = Math.pow(Q*Q*Q*Q/(Math.pow(0.7788,4)),1/16);
+}
+else if(document.getElementById("numConductors").value ==5){
+  var Q = r*0.7788*d*d*(2*d*0.5878*2*d*0.5878);
+  var sgmd = Math.pow(Q*Q*Q*Q*Q,1/25);
+  var sgmd1 = Math.pow(Q*Q*Q*Q*Q/(Math.pow(0.7788,5)),1/25);
+}
+else if(document.getElementById("numConductors").value ==6){
+  var x = Math.sqrt((d*Math.pow(3,1/2)/2)*(d*Math.pow(3,1/2)/2) + d*d)
+  var Q = r*0.7788*d*d*x*x*((d*Math.pow(3,1/2) + d));
+  var sgmd = Math.pow(Q*Q*Q*Q*Q*Q,1/36);
+  var sgmd1 = Math.pow(Q*Q*Q*Q*Q*Q/(Math.pow(0.7788,6)),1/36);
+}
+console.log(sgmd1)
 
-  // if (typeOfSystem[0].checked) {
-  //   distance = parseFloat(document.getElementById("distance").value);
-  //   const G = distance;
-  //   var inductance = 2 * (Math.pow(10, -4)) * (Math.log(G / (sgmd)));
-  //   var capacitance = (2 * esi * pi * Math.pow(10, 3)) / (Math.log(G / (sgmd1)));
-  // }
-  // else if (typeOfSystem[1].checked) {
-  //   distanceAB = document.getElementById("distanceAB").value;
-  //   distanceBC = document.getElementById("distanceBC").value;
-  //   distanceCA = document.getElementById("distanceCA").value;
-  //   const G = Math.pow((distanceAB * distanceBC * distanceCA), 1 / 3);
-  //   var inductance = 2 * (Math.pow(10, -4)) * (Math.log(G / (sgmd)));
-  //   var capacitance = (2 * esi * pi * Math.pow(10, 3)) / (Math.log(G / (sgmd1)));
-  // }
-  // var XL = 2 * pi * freq * inductance * lengthOfLine;
-  // var XC = (1 / (2 * pi * freq * capacitance* lengthOfLine ));
-  // var Y = 1 / XC;
+  if (typeOfSystem[0].checked) {
+    distance = parseFloat(document.getElementById("distance").value);
+    const G = distance;
+    var inductance = 2 * (Math.pow(10, -4)) * (Math.log(G / (sgmd)));
+    var capacitance = (2 * esi * pi * Math.pow(10, 3)) / (Math.log(G / (sgmd1)));
+  }
+  else if (typeOfSystem[1].checked) {
+    distanceAB = document.getElementById("distanceAB").value;
+    distanceBC = document.getElementById("distanceBC").value;
+    distanceCA = document.getElementById("distanceCA").value;
+    const G = Math.pow((distanceAB * distanceBC * distanceCA), 1 / 3);
+    var inductance = 2 * (Math.pow(10, -4)) * (Math.log(G / (sgmd)));
+    var capacitance = (2 * esi * pi * Math.pow(10, 3)) / (Math.log(G / (sgmd1)));
+  }
+  var XL = 2 * pi * freq * inductance * lengthOfLine;
+  var XC = (1 / (2 * pi * freq * capacitance* lengthOfLine ));
+  var Y = 1 / XC;
   XL = 0.5*150 , Y = 0.04 * Math.pow(10,-4)*150;
   var R = Resistance * lengthOfLine;
   var z = R*R + XL*XL;
-  // var Ichr = Vr*1000*2*pi*freq*capacitance*lengthOfLine;
+  var Ichr = Vr*1000*2*pi*freq*capacitance*lengthOfLine;
   var Irvalue = (receivingEndLoad * 1000000) / (Math.sqrt(3)* Math.sqrt(3) * Vr * pf * 1000);
   const Ir = roundToDecimal(Irvalue,5);
   console.log(Ir) 
@@ -240,11 +239,11 @@ function calculateValues(event) {
   var voltageRegulation = (((Vs/Math.sqrt(A1*A1 + A2*A2)) - Vr*1000)/(Vr*1000))*100;
   var efficiency = (receivingEndLoad * 1000000) / (Pin) * 100;
   // Set output values
-  // document.getElementById("inductance").innerHTML = inductance;
-  // document.getElementById("capacitance").innerHTML = capacitance;
+  document.getElementById("inductance").innerHTML = inductance;
+  document.getElementById("capacitance").innerHTML = capacitance;
   document.getElementById("inductiveReactance").innerHTML = XL;
-  // document.getElementById("capacitiveReactance").innerHTML = XC;
-  // document.getElementById("chargingcurrent").innerHTML = Ichr;
+  document.getElementById("capacitiveReactance").innerHTML = XC;
+  document.getElementById("chargingcurrent").innerHTML = Ichr;
   document.getElementById("A11").innerHTML = A1;
   document.getElementById("A22").innerHTML = A2;
   document.getElementById("B11").innerHTML = B1;
