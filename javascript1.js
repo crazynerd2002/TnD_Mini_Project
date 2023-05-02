@@ -133,7 +133,7 @@ function calculateValues(event) {
   console.log(r) 
 
 
-  Number of Conductors
+//   Number of Conductors
 if(document.getElementById("numConductors").value ==1){
   var Q = r*0.7788;
   var sgmd = Math.pow(Q,1);
